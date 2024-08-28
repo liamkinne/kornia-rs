@@ -29,7 +29,7 @@ fn read_no_mmap(file_path: &std::path::Path) -> kornia_image::Image<u8, 3> {
 fn bench_read_jpeg(c: &mut Criterion) {
     let mut group = c.benchmark_group("read_jpeg");
 
-    let img_path = std::path::Path::new("tests/data/dog.jpeg");
+    let img_path = "tests/data/dog.jpeg";
 
     // NOTE: this is the fastest method
     group.bench_function("jpegturbo", |b| {
